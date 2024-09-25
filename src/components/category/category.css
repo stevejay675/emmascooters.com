@@ -1,0 +1,115 @@
+/* General styles for category section */
+.category-section {
+    margin: 60px 80px;
+    transition: 0.5s;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.category-section h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+/* Flexbox layout for categories on larger screens */
+
+
+.category-section .categories .sub-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #fff;
+    gap: 20px;
+}
+
+.category-section .categories .sub-category img {
+    width: 100px;
+    height: 100px;
+    border: 50%;
+
+    
+}
+
+.category-section .categories .sub-category h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Styles for Swiper pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: -20px;
+}
+
+.swiper-pagination span {
+    bottom: -20%;
+}
+
+/* Navigation buttons */
+.navigators {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 50%;
+    width: 100%;
+}
+
+.navigators .navigate-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 1024px) {
+    .category-section {
+        margin: 40px 20px;
+    }
+
+    .category-section h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .category-section .categories {
+        flex-direction: column;
+    }
+
+    .category-section .categories .sub-category {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .category-section .categories .sub-category img {
+        height: 150px;
+    }
+
+    .category-section .categories .sub-category h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-section {
+        margin: 20px 10px;
+    }
+
+    .category-section h1 {
+        font-size: 22px;
+    }
+
+    .category-section .categories .sub-category {
+        width: 100%;
+    }
+
+    .category-section .categories .sub-category img {
+        height: 120px;
+    }
+
+    .category-section .categories .sub-category h2 {
+        font-size: 14px;
+    }
+}

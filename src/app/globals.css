@@ -1,0 +1,97 @@
+:root {
+   --darker: #0E0E40;
+   --normal: #121250;
+   --brighter: #2A2A70;
+   --very-bright: #45458F;
+ }
+
+ .container{
+  margin: 0 auto;
+  max-width: 1440px;
+ }
+ 
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   transition: 0.3s;
+   scroll-behavior: smooth;
+}
+
+body{
+   transition: 0.5s;
+   color: #191919;
+   scroll-behavior: smooth;
+}
+
+p{
+   color: white;
+ }
+
+button{
+   outline: none;
+   border: transparent;
+}
+
+input{
+   outline: none;
+}
+
+
+
+
+
+
+.not-found-page{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+
+.not-found-page a{
+   padding: 10px;
+   border-radius: 20px;
+   background-color: #6BC57D;
+   color: white;
+   cursor: pointer;
+   text-decoration: none;
+   
+}
+
+
+.loading{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.loading h3{
+   font-size: 20px;
+   color: var(--normal);
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+   width: 80px;
+   --b: 10px; 
+   aspect-ratio: 1;
+   border-radius: 50%;
+   padding: 1px;
+   background: conic-gradient(#0000 10%,var(--normal)) content-box;
+   -webkit-mask:
+     repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+     radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
+   -webkit-mask-composite: destination-in;
+           mask-composite: intersect;
+   animation:l4 1s infinite steps(10);
+ }
+ @keyframes l4 {to{transform: rotate(1turn)}}
+

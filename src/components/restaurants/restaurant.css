@@ -1,0 +1,131 @@
+/* General styles for restaurant section */
+.restaurant-section {
+    padding: 60px 70px;
+}
+
+.restaurant-section .title {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+/* Flexbox layout for restaurants */
+.restaurant-section .restaurants {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+/* Individual restaurant card styles */
+.restaurant-section .restaurants .sub-restaurant {
+    width: 45%; /* Default width for larger screens */
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    animation: fadeOut 2s forwards;
+}
+
+.restaurant-section .restaurants .sub-restaurant img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the card without distortion */
+}
+
+.restaurant-section .restaurants .sub-restaurant .restaurant-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 10;
+    width: 40%;
+    text-align: center; /* Center-align text */
+}
+
+.restaurant-section .restaurants .sub-restaurant .restaurant-text h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.restaurant-section .restaurants .sub-restaurant .restaurant-text a {
+    padding: 6px 10px;
+    background-color: var(--brighter);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 10px;
+    display: inline-block; /* Ensure padding is applied correctly */
+}
+
+.restaurant-section .restaurants .sub-restaurant .restaurant-text a:hover {
+    background-color: #fff;
+    color: #6BC57D;
+}
+
+/* Overlay blur effect */
+.restaurant-section .restaurants .sub-restaurant .blur {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .2);
+}
+
+/* "See All" button styles */
+.see-all-btn {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--darker);
+    border: 1px solid var(--brighter);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 1024px) {
+    .restaurant-section {
+        padding: 40px 20px; /* Adjust padding for medium screens */
+    }
+
+    .restaurant-section .title {
+        font-size: 26px; /* Adjust title size */
+    }
+
+    .restaurant-section .restaurants {
+        flex-direction: column; /* Stack restaurant cards */
+        align-items: center; /* Center-align cards */
+    }
+
+    .restaurant-section .restaurants .sub-restaurant {
+        width: 90%; /* Full width for cards on smaller screens */
+        height: auto; /* Auto height for responsive design */
+        margin: 10px 0; /* Adjust margin */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .restaurant-section {
+        padding: 20px 10px; /* Further reduce padding for small screens */
+    }
+
+    .restaurant-section .title {
+        font-size: 22px; /* Smaller title size for small screens */
+    }
+
+    .restaurant-section .restaurants .sub-restaurant {
+        width: 100%; /* Full width for mobile devices */
+    }
+
+    .restaurant-section .restaurants .sub-restaurant .restaurant-text h1 {
+        font-size: 20px; /* Adjust text size */
+    }
+}
